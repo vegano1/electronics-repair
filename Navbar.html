@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+    <title>Navbar</title>
+
+    <style>
+
+        /*Applies properties when screen width is 770px or less.*/
+        @media screen and (max-width: 770px){
+            .navbar-inverse .navbar-toggle{
+
+                border: 1px solid white;
+                margin: 22px 22px 22px 0;
+            }
+
+            ul {
+                border-top: 1px solid white;
+                background-color: black;
+                margin-top: 0;
+            }
+
+            #dropDown{
+                margin-top: 0;
+
+            }
+
+        }
+
+
+
+
+
+
+
+        .affix {
+            top: 0;
+            width: 100%;
+        }
+
+        .affix + .container-fluid {
+            padding-top: 70px;
+            height: 100px;
+        }
+
+        .navbar-Shadow {
+            -webkit-box-shadow: 0 15px 16px -16px #999;
+            -moz-box-shadow: 0 8px 6px -6px #999;
+            box-shadow: 0 10px 10px -6px #999;
+
+            /* the rest of your styling */
+        }
+
+
+
+        .container-fluid{
+            height: 80px;
+        }
+
+
+
+        .mynavbar {
+            text-align:center;
+        }
+
+        .nav {
+            float:none;
+            margin-top : 0;
+        }
+
+
+        .nav li {
+            display:inline-block;
+            float:none;
+            margin:0 20px;
+            vertical-align:middle;
+
+        }
+
+
+
+        .dropDown{
+            margin-top: 15px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+        }
+
+
+        .brand{
+            width: 100px;
+            display: inline-block;
+
+        }
+
+
+        #About{
+            border-bottom: 1px solid black;
+            background-color: #1E88E5;
+            padding-top:50px;
+            height:auto;
+            color: #fff;
+            text-align: center;
+
+
+
+        }
+
+        #Portfolio{
+            border-top: 1px solid black;
+            border-bottom: 1px solid black;
+            background-color: red;
+            padding-top:50px;
+            height:700px;
+            color: #fff;
+
+        }
+
+        #Contact{
+            border-top: 1px solid black;
+            background-color: green;
+            padding-top:50px;
+            height:700px;
+            color: #fff;
+
+        }
+
+
+        .navbar-inverse .navbar-nav>.active>a,
+        .navbar-inverse .navbar-nav>.active>a:focus,
+        .navbar-inverse .navbar-nav>.active>a:hover {
+
+            color: black;
+            background-color: beige;
+        }
+
+
+
+        body {
+            position: relative;
+            background-color: beige;
+
+        }
+
+        .container{
+            margin-top: 100px;
+
+        }
+
+
+        #img{
+
+        }
+
+        .Brayan{
+            margin-top: -10px;
+            width: 40%;
+            border: 1px solid black;
+            border-radius: 50%;
+
+
+        }
+    </style>
+
+
+
+</head>
+
+
+
+<body id="body" class="body" data-spy="scroll" data-target="#mainNavBar" >
+
+
+
+
+<div>
+<nav class=" mynavbar navbar-Shadow navbar-inverse" data-spy="affix">
+
+    <div class="container-fluid">
+
+        <!-- Logo -->
+        <div class="navbar-header ">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainNavBar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand"><img class="brand" src="https://s9.postimg.org/ob9t1ea5r/image.png"></a>
+        </div>
+
+        <!-- Menu Items -->
+
+        <div id="dropDown" class="dropDown">
+        <div class="test navbar-right collapse navbar-collapse" id="mainNavBar">
+
+            <ul class="nav navbar-nav">
+                <li class=""><a href="#About">About</a></li>
+                <li class=""><a href="#Portfolio">Portfolio</a></li>
+                <li class=""><a href="#Contact">Contact</a></li>
+            </ul>
+
+        </div>
+
+        </div>
+
+    </div>
+</nav>
+</div>
+
+
+
+
+<main class="container" >
+
+
+    <div id="About" class="container-fluid" data-offset="60">
+        <div id="img">
+        <img class="Brayan" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/11796350_1103806952979979_1698078666235423888_n.jpg?oh=b5ac49b749aa314f7f69c1a7aa05138e&oe=58AC1EE9">
+        </div>
+
+        <hr>
+
+        <div id="Intro">
+            <p>My name is Brayan Almonte I went to school to be a Computer Engineer, which has lead me down a path of technology and learning.
+                <br> Now im developing my skills as a digital guru in which i setup and maintain online businesses to make a living.</p>
+            <p></p>
+
+        </div>
+    </div>
+
+    <div id= "Portfolio" class="container-fluid">
+
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+        <p>Portfolio!</p>
+
+
+
+    </div>
+
+
+
+    <div id="Contact" class="container-fluid">
+
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+        <p>Contact!</p>
+
+
+    </div>
+</main>
+
+<footer id="footer" class="footer">
+    <p class="text-center"><br>This is my big footer, only test. :)</p>
+</footer>
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+
+
