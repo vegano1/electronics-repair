@@ -7,6 +7,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script>
+
+        function offsetAnchor() {
+            if(location.hash.length !== 0) {
+                window.scrollTo(window.scrollX, window.scrollY - 120);
+            }
+        }
+
+        // This will capture hash changes while on the page
+        $(window).on("hashchange", offsetAnchor);
+
+        // This is here so that when you enter the page with a hash,
+        // it can provide the offset in that case too. Having a timeout
+        // seems necessary to allow the browser to jump to the anchor first.
+        window.setTimeout(offsetAnchor, 1);
+
+    </script>
+
 
     <title>Navbar</title>
 
@@ -20,18 +38,64 @@
                 margin: 22px 22px 22px 0;
             }
 
-            ul {
+            .nav ul {
                 border-top: 1px solid white;
                 background-color: black;
                 margin-top: 0;
             }
+
+
 
             #dropDown{
                 margin-top: 0;
 
             }
 
+
+
+            ul{
+
+                font-size: 5vw;
+            }
+
+            #IPractice{
+                text-align: center;
+            }
+
+            .MobilePics{
+
+                width:105%;
+                height: 10%;
+            }
+
+
+
         }
+
+        @media screen and (min-width: 771px){
+            #IPractice{
+                border: 1px solid green;
+                text-align: center;
+                width: auto;
+                margin-top: 0;
+
+            }
+            #IPractice img{
+
+                float: left;
+                width: 33%;
+
+                max-height: 500px;
+
+
+            }
+
+
+
+        }
+
+
+
 
 
 
@@ -103,21 +167,18 @@
         #About{
             border-bottom: 1px solid black;
             background-color: #1E88E5;
-            padding-top:50px;
             height:auto;
             color: #fff;
             text-align: center;
-
-
-
+            font-weight: bold;
         }
 
         #Portfolio{
             border-top: 1px solid black;
             border-bottom: 1px solid black;
-            background-color: red;
+            background-color: silver;
             padding-top:50px;
-            height:700px;
+            height:auto;
             color: #fff;
 
         }
@@ -143,29 +204,74 @@
 
 
         body {
+            margin-top: 100px ;
             position: relative;
-            background-color: beige;
-
+            background-color: darkgrey;
         }
 
-        .container{
-            margin-top: 100px;
-
-        }
-
-
-        #img{
-
-        }
 
         .Brayan{
-            margin-top: -10px;
+            margin-top: 10px;
             width: 40%;
             border: 1px solid black;
             border-radius: 50%;
+        }
+
+
+        #Intro{
+            color: aliceblue;
+        }
+
+        #EP img{
+            border: 1px solid red;
+            width: 100%;
+        }
+
+        #IPractice img{
+            border: 10px solid silver;
 
 
         }
+
+        #IPractice .container{
+            margin-top: 0;
+        }
+        @font-face {
+            font-family: ZeroFont;
+            src: url(zero.regular.ttf) format("truetype");
+        }
+        #AboutHeader{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            font-family: "ZeroFont";
+            background-color: darkred;
+            width: 100%;
+            padding-bottom: 0;
+        }
+
+        #AboutHeader p{
+            margin-bottom: 0;
+        }
+
+        #PortfolioHeader{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            font-family: "ZeroFont";
+            background-color: navy;
+            width: 100%;
+            padding-bottom: 0;
+        }
+
+        #PortfolioHeader p{
+            margin-bottom: 0;
+        }
+
+
+
     </style>
 
 
@@ -174,7 +280,7 @@
 
 
 
-<body id="body" class="body" data-spy="scroll" data-target="#mainNavBar" >
+<body id="body" class="body" data-spy="scroll" data-target="#mainNavBar" data-offset="200" >
 
 
 
@@ -192,13 +298,13 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand"><img class="brand" src="https://s9.postimg.org/ob9t1ea5r/image.png"></a>
+            <a href="#" class="navbar-brand"><img class="brand" src="https://i.imgsafe.org/26c1877d95.png"></a>
         </div>
 
         <!-- Menu Items -->
 
         <div id="dropDown" class="dropDown">
-        <div class="test navbar-right collapse navbar-collapse" id="mainNavBar">
+        <div class="nav navbar-right collapse navbar-collapse" id="mainNavBar">
 
             <ul class="nav navbar-nav">
                 <li class=""><a href="#About">About</a></li>
@@ -219,8 +325,11 @@
 
 <main class="container" >
 
-
+    <div id="AboutHeader">
+        <p>About Me</p>
+    </div>
     <div id="About" class="container-fluid" data-offset="60">
+
         <div id="img">
         <img class="Brayan" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/11796350_1103806952979979_1698078666235423888_n.jpg?oh=b5ac49b749aa314f7f69c1a7aa05138e&oe=58AC1EE9">
         </div>
@@ -235,24 +344,44 @@
         </div>
     </div>
 
+    <div id="PortfolioHeader">
+        <p>Portfolio</p>
+    </div>
     <div id= "Portfolio" class="container-fluid">
 
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
-        <p>Portfolio!</p>
+
+        <div id="Pics">
+
+                    <div id="EP">
+                        <p>Electronics Portfolio: Online portfolio for my electronics work.</p>
+                        <img class="MobilePics" src="https://i.imgsafe.org/26bfae9ee4.jpg">
+                    </div>
+
+            <div id="IPractice" class="container">
+            <div >
+                <P>IPractice Challenge App: An app for leaning programming on the go. Uses Angular to create single page applications, and
+                pouchDB to store data locally.</P>
+
+                <div id="images">
+
+                    <img class="MobilePics" src="https://i.imgsafe.org/26bf83ce91.jpg">
+                    <img class="MobilePics" src="https://i.imgsafe.org/26bfdd4ffe.jpg">
+                    <img class="MobilePics" src="https://i.imgsafe.org/26bfd59aeb.jpg">
+                </div>
 
 
+
+
+            </div>
+        </div>
 
     </div>
 
 
+
+
+
+    </div>
 
     <div id="Contact" class="container-fluid">
 
