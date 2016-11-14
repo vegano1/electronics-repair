@@ -26,8 +26,8 @@
     </script>
 
 
-    <title>Navbar</title>
-
+    <title> Personal Portfolio </title>
+    <link rel="icon" type="image/png" href="https://i.imgsafe.org/7884793ddd.png" />
     <style>
 
         /*Applies properties when screen width is 770px or less.*/
@@ -39,6 +39,7 @@
             }
 
             .nav ul {
+
                 border-top: 1px solid white;
                 background-color: black;
                 margin-top: 0;
@@ -64,8 +65,27 @@
 
             .MobilePics{
 
-                width:105%;
+                width:100%;
                 height: 10%;
+            }
+
+            #EP p{
+                text-align: center;
+                font-size: 5vw;
+            }
+
+
+
+            #Contact p{
+                font-size: small;
+                margin-left: 0;
+            }
+
+            #ContactForm{
+                max-width: 100%;
+                margin-left: 0;
+                border: 1px solid red;
+
             }
 
 
@@ -74,7 +94,6 @@
 
         @media screen and (min-width: 771px){
             #IPractice{
-                border: 1px solid green;
                 text-align: center;
                 width: auto;
                 margin-top: 0;
@@ -83,7 +102,7 @@
             #IPractice img{
 
                 float: left;
-                width: 33%;
+                    width: 33%;
 
                 max-height: 500px;
 
@@ -93,12 +112,6 @@
 
 
         }
-
-
-
-
-
-
 
 
 
@@ -114,9 +127,11 @@
         }
 
         .navbar-Shadow {
-            -webkit-box-shadow: 0 15px 16px -16px #999;
-            -moz-box-shadow: 0 8px 6px -6px #999;
-            box-shadow: 0 10px 10px -6px #999;
+            -webkit-box-shadow: 0 15px 16px -16px #000;
+            -moz-box-shadow: 0 8px 6px -6px #000;
+
+            //Chrome
+            box-shadow: 10 0px 20px 10px #000;
 
             /* the rest of your styling */
         }
@@ -141,9 +156,9 @@
 
         .nav li {
             display:inline-block;
-            float:none;
-            margin:0 20px;
-            vertical-align:middle;
+            float:left;
+
+
 
         }
 
@@ -165,30 +180,50 @@
 
 
         #About{
+            font-size: large;
             border-bottom: 1px solid black;
-            background-color: #1E88E5;
+            background-color: #4ABDAC;
             height:auto;
             color: #fff;
             text-align: center;
             font-weight: bold;
+
         }
 
         #Portfolio{
+
             border-top: 1px solid black;
             border-bottom: 1px solid black;
-            background-color: silver;
-            padding-top:50px;
+            background-color: #4ABDAC;
             height:auto;
             color: #fff;
 
         }
 
         #Contact{
-            border-top: 1px solid black;
-            background-color: green;
-            padding-top:50px;
-            height:700px;
+            background-color: #4ABDAC;
+            padding-top:10px;
+            height: auto;
             color: #fff;
+
+
+        }
+
+        .Mobile {
+            margin-top: 10px;
+            margin-left: 10%;
+            font-size: large;
+            float: left;
+            max-width: 360px;
+            display: inline-block;
+        }
+
+        #Contact button{
+            box-shadow: 0 5px 10px #888888;
+            font-size: large;
+            color: #4ABDAC;
+            margin-top: 2px;
+            width: auto;
 
         }
 
@@ -198,7 +233,7 @@
         .navbar-inverse .navbar-nav>.active>a:hover {
 
             color: black;
-            background-color: beige;
+            background-color: #DFDCE3;
         }
 
 
@@ -206,7 +241,7 @@
         body {
             margin-top: 100px ;
             position: relative;
-            background-color: darkgrey;
+            background-color: #DFDCE3;
         }
 
 
@@ -223,12 +258,17 @@
         }
 
         #EP img{
-            border: 1px solid red;
+
             width: 100%;
         }
 
+        #EP p{
+            text-align: center;
+            font-size: 3vw;
+        }
+
         #IPractice img{
-            border: 10px solid silver;
+            border: 10px solid #4ABDAC ;
 
 
         }
@@ -236,17 +276,19 @@
         #IPractice .container{
             margin-top: 0;
         }
+
         @font-face {
             font-family: ZeroFont;
             src: url(zero.regular.ttf) format("truetype");
         }
+
         #AboutHeader{
             text-align: center;
             font-size: 30px;
             font-weight: bold;
             color: white;
-            font-family: "ZeroFont";
-            background-color: darkred;
+            font-family: "Monotype Corsiva";
+            background-color: #ee3011;
             width: 100%;
             padding-bottom: 0;
         }
@@ -260,8 +302,8 @@
             font-size: 30px;
             font-weight: bold;
             color: white;
-            font-family: "ZeroFont";
-            background-color: navy;
+            font-family: "Monotype Corsiva";
+            background-color: #ee3011;
             width: 100%;
             padding-bottom: 0;
         }
@@ -270,6 +312,64 @@
             margin-bottom: 0;
         }
 
+
+        #ContactHeader{
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: white;
+            font-family: "Monotype Corsiva";
+            background-color: #ee3011;
+            width: 100%;
+            padding-bottom: 0;
+        }
+
+        #ContactHeader p{
+            margin-bottom: 0;
+        }
+
+
+
+        .balloon {
+
+            width: auto;
+            padding: 10px 0 10px 15px;
+            font-family: "Monotype Corsiva";
+            font-weight: 400;
+            font-size: large;
+            color: #377D6A;
+            background: #efefef;
+            border: 0;
+            border-radius: 3px;
+
+        }
+
+        .balloon:focus,
+        .balloon:active {
+            color: #377D6A;
+            background: #fff;
+
+        }
+
+
+
+
+        .ContactForm{
+
+
+
+            margin-left: 20%;
+            float: left;
+            max-width: 100px;
+            margin-bottom: 20px;
+
+        }
+
+        #Message{
+
+            padding-bottom: 100px;
+
+        }
 
 
     </style>
@@ -298,7 +398,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="#" class="navbar-brand"><img class="brand" src="https://i.imgsafe.org/26c1877d95.png"></a>
+            <a href="#" class="navbar-brand"><img class="brand" src="https://i.imgsafe.org/77aeeb74db.png"></a>
         </div>
 
         <!-- Menu Items -->
@@ -347,32 +447,34 @@
     <div id="PortfolioHeader">
         <p>Portfolio</p>
     </div>
-    <div id= "Portfolio" class="container-fluid">
+    <div id= "Portfolio" >
 
 
         <div id="Pics">
 
                     <div id="EP">
-                        <p>Electronics Portfolio: Online portfolio for my electronics work.</p>
-                        <img class="MobilePics" src="https://i.imgsafe.org/26bfae9ee4.jpg">
+
+                        <a target="_blank" href="https://electronicsportfolio.wordpress.com/">
+                            <img class="MobilePics" src="https://i.imgsafe.org/26bfae9ee4.jpg">
+                        </a>
+
                     </div>
 
             <div id="IPractice" class="container">
-            <div >
-                <P>IPractice Challenge App: An app for leaning programming on the go. Uses Angular to create single page applications, and
-                pouchDB to store data locally.</P>
+
+
 
                 <div id="images">
 
-                    <img class="MobilePics" src="https://i.imgsafe.org/26bf83ce91.jpg">
-                    <img class="MobilePics" src="https://i.imgsafe.org/26bfdd4ffe.jpg">
-                    <img class="MobilePics" src="https://i.imgsafe.org/26bfd59aeb.jpg">
+                    <img class="MobilePics" src="https://i.imgsafe.org/744cf9db2c.png">
+                    <img class="MobilePics" src="https://i.imgsafe.org/744d035b2f.png">
+                    <img class="MobilePics" src="https://i.imgsafe.org/7441fec0a5.png">
                 </div>
 
 
 
 
-            </div>
+
         </div>
 
     </div>
@@ -383,25 +485,46 @@
 
     </div>
 
+    <div id="ContactHeader">
+        <p>Contact Me</p>
+    </div>
     <div id="Contact" class="container-fluid">
 
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
-        <p>Contact!</p>
+        <div >
+
+            <p class="Mobile">
+                Hey there, want to get in touch?  Whether it's about Web Design, Programming Microcontrollers, or even talk about
+                that sweet new riff you just came up with. Please shoot me an email and I will respond as fast as possible. If you
+                are looking to hire me Please take a look at my Github and online resume, they provide a formal description of
+                my credentials and experience.
+            </p>
+
+            <div id="ContactForm" class="ContactForm">
+<form  >
+
+    <label for="Name">Name</label><input class="balloon" id="Name" type="text" placeholder="John Doe" />
+
+    <label for="Email">Email</label><input class="balloon" id="Email" type="text" placeholder="JohnDoe@example.com" />
+
+    <label for="Phone-Number">Number</label><input class="balloon" id="Phone-Number" type="text" placeholder="xxx-xxx-xxxx" />
+
+    <label for="Message">Message</label>
+    <textarea class=" balloon form-control" rows="1" id="Message" form="ContactForm" placeholder="Hey there my name is ..."></textarea>
+    <button type="submit">Send!</button>
+
+</form>
+
+            </div>
 
 
+        </div>
     </div>
+
 </main>
 
 <footer id="footer" class="footer">
-    <p class="text-center"><br>This is my big footer, only test. :)</p>
+    <P>Dont put stuff here</P>
+
 </footer>
 
 
