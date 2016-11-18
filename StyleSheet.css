@@ -1,0 +1,305 @@
+/*Applies properties when screen width is 770px or less.*/
+@media screen and (max-width: 770px){
+    .navbar-inverse .navbar-toggle{
+
+        border: 1px solid white;
+        margin: 22px 22px 22px 0;
+    }
+
+    .nav ul {
+
+        border-top: 1px solid white;
+        background-color: black;
+        margin-top: 0;
+    }
+
+    #dropDown{
+        margin-top: 0;
+    }
+
+    ul{
+
+        font-size: 5vw;
+    }
+
+    #IPractice{
+        text-align: center;
+    }
+
+    .MobilePics{
+
+        width:100%;
+        height: 10%;
+    }
+
+    #EP p{
+        text-align: center;
+        font-size: 5vw;
+    }
+
+    #Contact p{
+        margin-left: 0;
+        max-width: 100%;
+        font-size: small;
+    }
+
+    #ContactForm{
+
+        margin-left: 0;
+        max-width: 40%;
+    }
+
+
+}
+
+@media screen and (min-width: 771px){
+
+    #IPractice{
+        text-align: center;
+        width: auto;
+        margin-top: 0;
+
+    }
+    #IPractice img{
+
+        float: left;
+        width: 33%;
+        max-height: 500px;
+    }
+}
+
+
+/*--------------------------------------------NAVBAR STYLING-------------------------------------------------*/
+.affix {
+    top: 0;
+    width: 100%;
+}
+
+.affix + .container-fluid {
+    padding-top: 70px;
+    height: 100px;
+}
+
+.navbar-inverse .navbar-nav>.active>a,
+.navbar-inverse .navbar-nav>.active>a:focus,
+.navbar-inverse .navbar-nav>.active>a:hover {
+
+    color: black;
+    background-color: #DFDCE3;
+}
+
+.navbar-Shadow {
+    -webkit-box-shadow: 0 15px 16px -16px #000;
+    -moz-box-shadow: 0 8px 6px -6px #000;
+    /*Chrome*/
+    box-shadow:  0 0 10px 1px #000;
+}
+
+.container-fluid{
+    height: 80px;
+}
+
+.mynavbar {
+    text-align:center;
+}
+
+.nav {
+    float:none;
+    margin-top : 0;
+}
+
+
+.nav li {
+    display:inline-block;
+    float:left;
+}
+
+.dropDown{
+    margin-top: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.brand{
+    width: 100px;
+    display: inline-block;
+}
+
+/*--------------------------------------------NAVBAR STYLING-------------------------------------------------*/
+
+
+
+
+
+/*--------------------------------------------CONTENT STYLING-------------------------------------------------*/
+
+/*----------------ABOUT STYLING*-------------*/
+#AboutHeader{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: "Monotype Corsiva";
+    background-color: #ee3011;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+#AboutHeader p{
+    margin-bottom: 0;
+}
+
+#About{
+
+
+    font-size: large;
+    border-bottom: 1px solid black;
+    background-color: #4ABDAC;
+    height:auto;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Brayan{
+    margin-top: 10px;
+    width: 40%;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+#Intro{
+    color: aliceblue;
+}
+
+/*------------PORTFOLIO STYLING*-------------*/
+#PortfolioHeader{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: "Monotype Corsiva";
+    background-color: #ee3011;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+#PortfolioHeader p{
+    margin-bottom: 0;
+}
+
+#Portfolio{
+
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    background-color: #4ABDAC;
+    height:auto;
+    color: #fff;
+}
+
+#EP img{
+
+    width: 100%;
+}
+
+#EP p{
+    text-align: center;
+    font-size: 3vw;
+}
+
+#IPractice img{
+    border: 10px solid #4ABDAC ;
+}
+
+/*------------CONTACT STYLING*-------------*/
+#ContactHeader{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    font-family: "Monotype Corsiva";
+    background-color: #ee3011;
+    width: 100%;
+    padding-bottom: 0;
+}
+
+#ContactHeader p{
+    margin-bottom: 0;
+}
+
+#Contact{
+    background-color: #4ABDAC;
+    padding-top:10px;
+    height: auto;
+    color: #fff;
+}
+
+.GetinTouch {
+    margin-top: 10px;
+    margin-left: 10%;
+    font-size: large;
+    float: left;
+    max-width: 360px;
+    display: inline-block;
+}
+
+.ContactForm{
+    margin-left: 20%;
+    float: left;
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.balloon {
+    width: auto;
+    padding: 10px 0 10px 15px;
+    font-family: "Monotype Corsiva";
+    font-weight: 400;
+    font-size: large;
+    color: #377D6A;
+    background: #efefef;
+    border: 0;
+    border-radius: 3px;
+}
+
+.balloon:focus,
+.balloon:active {
+    color: #377D6A;
+    background: #fff;
+}
+
+#Message{
+    width: auto;
+    resize: none;
+    height: 150px;
+}
+
+
+#Contact button{
+    box-shadow: 0 5px 10px #888888;
+    font-size: large;
+    color: #4ABDAC;
+    margin-top: 2px;
+    width: auto;
+}
+
+#Social{
+
+    text-align: center;
+    margin: 5px 0 5px 0;
+}
+#Social img{
+
+    width: 10%;
+}
+
+body {
+    margin-top: 100px ;
+    position: relative;
+    background-color: #DFDCE3;
+}
+
+
+
+
+
