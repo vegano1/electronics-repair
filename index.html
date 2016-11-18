@@ -3,376 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!--Bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script>
-
-        function offsetAnchor() {
-            if(location.hash.length !== 0) {
-                window.scrollTo(window.scrollX, window.scrollY - 120);
-            }
-        }
-
-        // This will capture hash changes while on the page
-        $(window).on("hashchange", offsetAnchor);
-
-        // This is here so that when you enter the page with a hash,
-        // it can provide the offset in that case too. Having a timeout
-        // seems necessary to allow the browser to jump to the anchor first.
-        window.setTimeout(offsetAnchor, 1);
-
-    </script>
+    <!--My StyleSheet and Javascript Files-->
+    <link href="StyleSheet.css" rel="stylesheet" type="text/css">
+    <script src="Logic.js"></script>
 
 
+    <!--Page tittle and Icon-->
     <title> Personal Portfolio </title>
     <link rel="icon" type="image/png" href="https://i.imgsafe.org/7884793ddd.png" />
-    <style>
-
-        /*Applies properties when screen width is 770px or less.*/
-        @media screen and (max-width: 770px){
-            .navbar-inverse .navbar-toggle{
-
-                border: 1px solid white;
-                margin: 22px 22px 22px 0;
-            }
-
-            .nav ul {
-
-                border-top: 1px solid white;
-                background-color: black;
-                margin-top: 0;
-            }
-
-
-
-            #dropDown{
-                margin-top: 0;
-
-            }
-
-
-
-            ul{
-
-                font-size: 5vw;
-            }
-
-            #IPractice{
-                text-align: center;
-            }
-
-            .MobilePics{
-
-                width:100%;
-                height: 10%;
-            }
-
-            #EP p{
-                text-align: center;
-                font-size: 5vw;
-            }
-
-
-
-            #Contact p{
-                font-size: small;
-                margin-left: 0;
-            }
-
-            #ContactForm{
-                max-width: 100%;
-                margin-left: 0;
-                border: 1px solid red;
-
-            }
-
-
-
-        }
-
-        @media screen and (min-width: 771px){
-            #IPractice{
-                text-align: center;
-                width: auto;
-                margin-top: 0;
-
-            }
-            #IPractice img{
-
-                float: left;
-                    width: 33%;
-
-                max-height: 500px;
-
-
-            }
-
-
-
-        }
-
-
-
-
-        .affix {
-            top: 0;
-            width: 100%;
-        }
-
-        .affix + .container-fluid {
-            padding-top: 70px;
-            height: 100px;
-        }
-
-        .navbar-Shadow {
-            -webkit-box-shadow: 0 15px 16px -16px #000;
-            -moz-box-shadow: 0 8px 6px -6px #000;
-
-            //Chrome
-            box-shadow: 10 0px 20px 10px #000;
-
-            /* the rest of your styling */
-        }
-
-
-
-        .container-fluid{
-            height: 80px;
-        }
-
-
-
-        .mynavbar {
-            text-align:center;
-        }
-
-        .nav {
-            float:none;
-            margin-top : 0;
-        }
-
-
-        .nav li {
-            display:inline-block;
-            float:left;
-
-
-
-        }
-
-
-
-        .dropDown{
-            margin-top: 15px;
-            padding-left: 20px;
-            padding-right: 20px;
-
-        }
-
-
-        .brand{
-            width: 100px;
-            display: inline-block;
-
-        }
-
-
-        #About{
-            font-size: large;
-            border-bottom: 1px solid black;
-            background-color: #4ABDAC;
-            height:auto;
-            color: #fff;
-            text-align: center;
-            font-weight: bold;
-
-        }
-
-        #Portfolio{
-
-            border-top: 1px solid black;
-            border-bottom: 1px solid black;
-            background-color: #4ABDAC;
-            height:auto;
-            color: #fff;
-
-        }
-
-        #Contact{
-            background-color: #4ABDAC;
-            padding-top:10px;
-            height: auto;
-            color: #fff;
-
-
-        }
-
-        .Mobile {
-            margin-top: 10px;
-            margin-left: 10%;
-            font-size: large;
-            float: left;
-            max-width: 360px;
-            display: inline-block;
-        }
-
-        #Contact button{
-            box-shadow: 0 5px 10px #888888;
-            font-size: large;
-            color: #4ABDAC;
-            margin-top: 2px;
-            width: auto;
-
-        }
-
-
-        .navbar-inverse .navbar-nav>.active>a,
-        .navbar-inverse .navbar-nav>.active>a:focus,
-        .navbar-inverse .navbar-nav>.active>a:hover {
-
-            color: black;
-            background-color: #DFDCE3;
-        }
-
-
-
-        body {
-            margin-top: 100px ;
-            position: relative;
-            background-color: #DFDCE3;
-        }
-
-
-        .Brayan{
-            margin-top: 10px;
-            width: 40%;
-            border: 1px solid black;
-            border-radius: 50%;
-        }
-
-
-        #Intro{
-            color: aliceblue;
-        }
-
-        #EP img{
-
-            width: 100%;
-        }
-
-        #EP p{
-            text-align: center;
-            font-size: 3vw;
-        }
-
-        #IPractice img{
-            border: 10px solid #4ABDAC ;
-
-
-        }
-
-        #IPractice .container{
-            margin-top: 0;
-        }
-
-        @font-face {
-            font-family: ZeroFont;
-            src: url(zero.regular.ttf) format("truetype");
-        }
-
-        #AboutHeader{
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            font-family: "Monotype Corsiva";
-            background-color: #ee3011;
-            width: 100%;
-            padding-bottom: 0;
-        }
-
-        #AboutHeader p{
-            margin-bottom: 0;
-        }
-
-        #PortfolioHeader{
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            font-family: "Monotype Corsiva";
-            background-color: #ee3011;
-            width: 100%;
-            padding-bottom: 0;
-        }
-
-        #PortfolioHeader p{
-            margin-bottom: 0;
-        }
-
-
-        #ContactHeader{
-            text-align: center;
-            font-size: 30px;
-            font-weight: bold;
-            color: white;
-            font-family: "Monotype Corsiva";
-            background-color: #ee3011;
-            width: 100%;
-            padding-bottom: 0;
-        }
-
-        #ContactHeader p{
-            margin-bottom: 0;
-        }
-
-
-
-        .balloon {
-
-            width: auto;
-            padding: 10px 0 10px 15px;
-            font-family: "Monotype Corsiva";
-            font-weight: 400;
-            font-size: large;
-            color: #377D6A;
-            background: #efefef;
-            border: 0;
-            border-radius: 3px;
-
-        }
-
-        .balloon:focus,
-        .balloon:active {
-            color: #377D6A;
-            background: #fff;
-
-        }
-
-
-
-
-        .ContactForm{
-
-
-
-            margin-left: 20%;
-            float: left;
-            max-width: 100px;
-            margin-bottom: 20px;
-
-        }
-
-        #Message{
-
-            padding-bottom: 100px;
-
-        }
-
-
-    </style>
 
 
 
@@ -383,9 +28,7 @@
 <body id="body" class="body" data-spy="scroll" data-target="#mainNavBar" data-offset="200" >
 
 
-
-
-<div>
+<!---------------------------------------------NAVIGATION BAR---------------------------------------------------------->
 <nav class=" mynavbar navbar-Shadow navbar-inverse" data-spy="affix">
 
     <div class="container-fluid">
@@ -418,20 +61,21 @@
 
     </div>
 </nav>
-</div>
+
 
 
 
 
 <main class="container" >
 
+    <!-------------------------------------------------ABOUT CONTENT------------------------------------------------------->
     <div id="AboutHeader">
         <p>About Me</p>
     </div>
     <div id="About" class="container-fluid" data-offset="60">
 
         <div id="img">
-        <img class="Brayan" src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/11796350_1103806952979979_1698078666235423888_n.jpg?oh=b5ac49b749aa314f7f69c1a7aa05138e&oe=58AC1EE9">
+        <img class="Brayan" src="https://media.licdn.com/media/AAEAAQAAAAAAAAhJAAAAJDBiNTk1M2IyLTI3ODYtNGY5OC1iMTdjLWMxODEzNjE0YjI0ZA.jpg">
         </div>
 
         <hr>
@@ -444,11 +88,14 @@
         </div>
     </div>
 
+
+    <!------------------------------------------PORTFOLIO SECTION----------------------------------------------------->
+
     <div id="PortfolioHeader">
         <p>Portfolio</p>
     </div>
-    <div id= "Portfolio" >
 
+    <div id= "Portfolio">
 
         <div id="Pics">
 
@@ -462,28 +109,17 @@
 
             <div id="IPractice" class="container">
 
-
-
                 <div id="images">
 
                     <img class="MobilePics" src="https://i.imgsafe.org/744cf9db2c.png">
                     <img class="MobilePics" src="https://i.imgsafe.org/744d035b2f.png">
                     <img class="MobilePics" src="https://i.imgsafe.org/7441fec0a5.png">
                 </div>
-
-
-
-
-
+            </div>
         </div>
-
     </div>
 
-
-
-
-
-    </div>
+    <!-------------------------------------------------CONTACT ME CONTENT---------------------------------------------->
 
     <div id="ContactHeader">
         <p>Contact Me</p>
@@ -492,27 +128,25 @@
 
         <div >
 
-            <p class="Mobile">
+            <p class="GetinTouch">
                 Hey there, want to get in touch?  Whether it's about Web Design, Programming Microcontrollers, or even talk about
                 that sweet new riff you just came up with. Please shoot me an email and I will respond as fast as possible. If you
                 are looking to hire me Please take a look at my Github and online resume, they provide a formal description of
                 my credentials and experience.
             </p>
 
+            <!----------------------------------------------CONTACT FORM----------------------------------------------->
             <div id="ContactForm" class="ContactForm">
-<form  >
+                <form>
 
-    <label for="Name">Name</label><input class="balloon" id="Name" type="text" placeholder="John Doe" />
+                    <label for="Name">Name</label><input class="balloon" id="Name" type="text" placeholder="John Doe" />
+                    <label for="Email">Email</label><input class="balloon" id="Email" type="text" placeholder="JohnDoe@example.com" />
+                    <label for="Phone-Number">Number</label><input class="balloon" id="Phone-Number" type="text" placeholder="xxx-xxx-xxxx" />
+                    <label for="Message">Message</label>
 
-    <label for="Email">Email</label><input class="balloon" id="Email" type="text" placeholder="JohnDoe@example.com" />
-
-    <label for="Phone-Number">Number</label><input class="balloon" id="Phone-Number" type="text" placeholder="xxx-xxx-xxxx" />
-
-    <label for="Message">Message</label>
-    <textarea class=" balloon form-control" rows="1" id="Message" form="ContactForm" placeholder="Hey there my name is ..."></textarea>
-    <button type="submit">Send!</button>
-
-</form>
+                    <textarea class=" balloon form-control" rows="1" id="Message" form="ContactForm" placeholder="Hey there my name is ..."></textarea>
+                    <button type="submit">Send!</button>
+                </form>
 
             </div>
 
@@ -522,18 +156,26 @@
 
 </main>
 
+
+<!----------------------------------------------------FOOTER----------------------------------------------------------->
+
 <footer id="footer" class="footer">
-    <P>Dont put stuff here</P>
 
+    <div id="Social">
+        <p>Developed by Brayan Almonte</p>
+        <a href="https://plus.google.com/u/0/">
+            <img src="https://cdn4.iconfinder.com/data/icons/social-messaging-ui-color-shapes-2/128/social-circle-google-plus-2-128.png">
+        </a>
+        <a href="https://www.linkedin.com/in/brayan-almonte-98394212a?trk=hp-identity-name">
+            <img src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/linkedin-128.png">
+        </a>
+
+        <a href="https://github.com/vegano1">
+            <img src="https://cdn3.iconfinder.com/data/icons/free-social-icons/67/github_circle_black-128.png">
+        </a>
+
+    </div>
 </footer>
-
-
-
-
-
-
-
-
 
 </body>
 </html>
